@@ -81,7 +81,13 @@ img{
 }
 
 
-
+.scroll-tracker{
+    height: .5rem;
+    background-color: var(--very-dark-cyan);
+    position: fixed;
+    inset: 0 0 auto;
+    transform-origin: left;
+}
 
 
 
