@@ -16,41 +16,25 @@ scrollTracker.animate(
     }
 )
 
-// const showcase = document.getElementsByClassName("showcase")
+const showcase = document.getElementsByClassName("showcase")
 
-// for( let i=0 ;i<showcase.length;i++){
+for( let i=0 ;i<showcase.length;i++){
 
-//     const sectionOffsetTop = showcase[i].offsetTop;
-//     const sectionHeight = showcase[i].offsetHeight;
-//     const showcaseAnimationTimeline = new ScrollTimeline({
-//         scrolloffsets:[CSS.px(sectionOffsetTop + sectionHeight),CSS.px(sectionOffsetTop)]
-//     });
+    const sectionOffsetTop = showcase[i].offsetTop;
+    const sectionHeight = showcase[i].offsetHeight;
+    const showcaseAnimationTimeline = new ScrollTimeline({
+        scrolloffsets:[CSS.px(sectionOffsetTop + sectionHeight - window.innerHeight),CSS.px(sectionOffsetTop)]
+    });
 
-//     showcase[i].animate(
-//         {
-//           transform:["translateX(100rem)","translateX(0)"]  
-//         },
-//         {
-//             duration: 1000,
-//             timeline:showcaseAnimationTimeline
-//         }
-//     )
-// }
+    showcase[i].animate(
+        {
+          transform:["translateY(6rem)","translateY(0)"],
+          transform:["scaleX(1)","scaleX(0.9)"]
 
-// showcase.forEach(function(section){
-//     const sectionOffsetTop = section.offsetTop;
-//     const sectionHeight = section.offsetHeight;
-//     const showcaseAnimationTimeline = new ScrollTimeline({
-//         scrolloffsets:[CSS.px(sectionOffsetTop + sectionHeight),CSS.px(sectionOffsetTop)]
-//     });
-
-//     section.animate(
-//         {
-//           transform:["translateX(100rem)","translateX(0)"]  
-//         },
-//         {
-//             duration: 1000,
-//             timeline:showcaseAnimationTimeline
-//         }
-//     )
-// })
+        },
+        {
+            duration: 1000,
+            timeline:showcaseAnimationTimeline
+        }
+    )
+}
